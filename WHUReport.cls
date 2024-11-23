@@ -24,10 +24,11 @@
 % Other settings: table, bib, math
 \RequirePackage{xcolor}
 \usepackage{booktabs}%三线表
+\usepackage{multirow}%合并单元格
 \usepackage{stfloats}
 \usepackage{datetime}
 \usepackage{natbib}
-\usepackage{gbt7714}
+\usepackage{gbt7714}%gbt7714-2015文献引用格式
 \usepackage{amsmath}%\cfrac{分子}{分母}
 \usepackage[breaklinks,colorlinks,linkcolor=black,
 citecolor=black,urlcolor=black]{hyperref}
@@ -118,7 +119,7 @@ citecolor=black,urlcolor=black]{hyperref}
 \newfontfamily\sectionef{Times New Roman}
 \newCJKfontfamily\sectioncf{kaishu}
 \setCJKfamilyfont{simkai}{SIMKAI.TTF}
-\renewcommand{\kaishu}{\CJKfamily{simkai}}
+\renewcommand{\kaishu}{\CJKfamily{simkai}}%楷书字体指令
 \titleformat{\section}{\raggedright\normalsize\bfseries}{}{-1em}{}
 \titleformat*{\subsection}{\raggedright\small\bfseries}
 \titleformat*{\subsubsection}{\raggedright\small\sectioncf}
@@ -132,7 +133,7 @@ citecolor=black,urlcolor=black]{hyperref}
 \usepackage{ifthen}%这个宏包提供逻辑判断命令
 \newboolean{first}%引入布尔变量
 \setboolean{first}{true}%将布尔变量设置为true
-\captionsetup{font={small}}
+\captionsetup{font={small,sf}}
 \fancypagestyle{maincontent}{
 	\fancyhf{}  %清空页眉页脚设置
 	\fancyhead[EL, OR]{\thepage}

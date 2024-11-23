@@ -56,18 +56,70 @@
 	
 	表必须有表序、表题。表中顶线与栏目线之间的部分叫项目栏，底线与栏目线之间的部分叫表身\cite{3}。表身中数字一般不带单位，百分数也不带百分号，应把单位符号和百分号等归并在栏目中。如果表中栏目中单位均相同，则可把共同的单位提出来标示在表格顶线上方的右端（不加“单位”二字）。表身中同一栏各行的数值应以个位（或小数点），且有效位数相同。上下左右相邻栏内的文字或数字相同时，应重复写出。
 	
-	\begin{table}[H]
-		\centering
-		\caption{表题}
-		\small
-		\begin{tabular}{ccccc}
-			\Xhline{1.0pt}
-			\makebox[0.1\textwidth][c]{xx}	&  \makebox[0.05\textwidth][c]{意义} &  \makebox[0.05\textwidth][c]{意义}&  \makebox[0.05\textwidth][c]{意义}&  \makebox[0.05\textwidth][c]{意义}\\ \Xhline{0.5pt}
-			1&1&1&1&1\\
-			2&2&2&2&2\\
-			\Xhline{1.0pt}
-		\end{tabular}
-	\end{table}
+\begin{table}[H]
+\centering
+\caption{表题}
+\small
+\begin{tabular}{ccccc}
+\Xhline{1.0pt}
+\makebox[0.1\textwidth][c]{xx}	&  \makebox[0.05\textwidth][c]{意义} &  \makebox[0.05\textwidth][c]{意义}&  \makebox[0.05\textwidth][c]{意义}&  \makebox[0.05\textwidth][c]{意义}\\  \Xhline{0.5pt}
+1&1&1&1&1\\
+2&2&2&2&2\\\Xhline{1.0pt}
+\end{tabular}
+\end{table}
+    
+\begin{table}[H]
+\small
+\centering
+\caption{也许更好的三线表}
+\begin{tabular}{ccccccc}
+\Xhline{1.0pt}
+\multirow{2}*{序号} & \multicolumn{3}{c}{意义} & \multicolumn{3}{c}{意义2} \\ \cline{2-7} 
+                    & 1      & 2      & 3     & 1      & 2      & 3     \\ \Xhline{0.5pt}
+1                   & 1      & 1      & 1     & 1      & 1      & 1     \\
+2                   & 2      & 2      & 2     & 2      & 2      & 2     \\
+3                   & 3      & 3      & 3     & 3      & 3      & 3     \\
+4                   & 4      & 4      & 4     & 4      & 4      & 4     \\ \Xhline{1.0pt}
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\small
+\centering
+\caption{长表格}
+\begin{tabular}{ccccccc}
+\Xhline{1.0pt}
+\multirow{2}*{序号} & \multicolumn{3}{c}{意义} & \multicolumn{3}{c}{意义2} \\ \cline{2-7} 
+                    & 1      & 2      & 3     & 1      & 2      & 3     \\ \Xhline{0.5pt}
+1                   & 1      & 1      & 1     & 1      & 1      & 1     \\
+2                   & 2      & 2      & 2     & 2      & 2      & 2     \\
+3                   & 3      & 3      & 3     & 3      & 3      & 3     \\
+1                   & 1      & 1      & 1     & 1      & 1      & 1     \\
+2                   & 2      & 2      & 2     & 2      & 2      & 2     \\
+3                   & 3      & 3      & 3     & 3      & 3      & 3     \\
+1                   & 1      & 1      & 1     & 1      & 1      & 1     \\
+2                   & 2      & 2      & 2     & 2      & 2      & 2     \\
+3                   & 3      & 3      & 3     & 3      & 3      & 3     \\
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\small
+\centering
+\ContinuedFloat %手动分割的长表格 测试longtable，supertabular，xtab后的最佳解决方案
+\caption{续表}
+\begin{tabular}{ccccccc}
+1                   & 1      & 1      & 1     & 1      & 1      & 1     \\
+2                   & 2      & 2      & 2     & 2      & 2      & 2     \\
+3                   & 3      & 3      & 3     & 3      & 3      & 3     \\
+1                   & 1      & 1      & 1     & 1      & 1      & 1     \\
+2                   & 2      & 2      & 2     & 2      & 2      & 2     \\
+3                   & 3      & 3      & 3     & 3      & 3      & 3     \\
+1                   & 1      & 1      & 1     & 1      & 1      & 1     \\
+2                   & 2      & 2      & 2     & 2      & 2      & 2     \\
+3                   & 3      & 3      & 3     & 3      & 3      & 3     \\\Xhline{1.0pt}
+\end{tabular}
+\end{table}
+
 	\section{图的规范化}
 	\begin{figure}[H]
 		\centering
